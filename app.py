@@ -101,6 +101,11 @@ def upload_video():
     return jsonify(response), 200
 
 
+@app.route('/admin', methods=["GET"])
+def main_page():
+    return "HI!"
+
+
 if __name__ == "__main__":
     app.run()
 
