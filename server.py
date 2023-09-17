@@ -24,11 +24,11 @@ choice_to_video = {
     "Baseball": "shellhacks_algorithm/data/baseball/baseball_side_view.mp4",
     "Basketball": "shellhacks_algorithm/data/basketball/basketball_side_view.mp4",
     "Boxing": "shellhacks_algorithm/data/",
-    "Football": "shellhacks_algorithm/data/football/",
+    "Football": "shellhacks_algorithm/data/football/football throw back view.mp4",
     "Golf Side View": "shellhacks_algorithm/data/golf/golf_side_view.mp4",
     "Golf Back View": "shellhacks_algorithm/data/golf/golf_front_view.mp4",
     "Running": "shellhacks_algorithm/data/running/running_side_view.mp4",
-    "Push-ups": "shellhacks_algorithm/data/",
+    "Push-ups": "shellhacks_algorithm/data/pushups/pushups_trimmedx2_1.mp4",
     "Snatch": "shellhacks_algorithm/data/snatch/snatch_front_view.mp4",
     "Squat": "shellhacks_algorithm/data/squat/squat_side_view.mp4",
     "Clean and Jerk": "shellhacks_algorithm/data/cleanandjerk/clean_and_jerk_front_view.mp4"

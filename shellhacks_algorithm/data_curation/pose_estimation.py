@@ -161,20 +161,20 @@ class PoseEstimateFactory:
         pass
 
     @staticmethod
-    def create_pose_estimate(img: mp.Image) -> tuple[PoseEstimate, mp.Image]:
+    def create_pose_estimate(img: mp.Image) -> tuple[PoseEstimate, mp.Image | None]:
         detector = Detector()
 
         raw_pose_estimate = detector.detect(img)
 
         if len(raw_pose_estimate.pose_landmarks) == 0:
-            return PoseEstimate()
+            return PoseEstimate(), None
 
         res = raw_pose_estimate.pose_landmarks[0]
 
         annotated_image = draw_landmarks_on_image(img.numpy_view(), raw_pose_estimate)
 
         if len(res) < 33:
-            return PoseEstimate()
+            return PoseEstimate(), None
 
         ret = PoseEstimate()
 
@@ -202,7 +202,8 @@ def create_angle_nets_from_video(video: List[mp.Image]) -> tuple[dict[tuple[tupl
     for pose_estimate, annotated_image in pose_estimates:
         if not pose_estimate:
             continue
-
+        if annotated_image is None:
+            continue
         an = pose_estimate.calculate_angle_net()
 
         if not an:

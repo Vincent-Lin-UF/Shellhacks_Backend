@@ -1,0 +1,7 @@
+numpy
+mediapipe
+opencv-python
+ffmpeg-python
+scipy
+matplotlib
+flask
