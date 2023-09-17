@@ -5,3 +5,5 @@ ffmpeg-python
 scipy
 matplotlib
 flask
+flask-cors
+
